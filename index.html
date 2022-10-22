@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <title>CRUD</title>
+        <link rel="stylesheet" href="css/all.min.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/index_stylesheet.css">
+    </head>
+    <body>
+        <h1 class="text-center text-info my-2">Our Store</h1>
+        <div class="container">
+            <div>
+                <label class="fs-4 fw-bold" for="input1">Name</label>
+                <input id="input1"  class="form-control mb-3">
+            </div>
+            <div>
+                <label class="fs-4 fw-bold" for="input2">Price</label>
+                <input  id="input2" class="form-control mb-3">
+            </div>
+            <div>
+                <label class="fs-4 fw-bold" for="input3">Category</label>
+                <input   id="input3"  class="form-control mb-3">
+            </div>
+            <div>
+                <label class="fs-4 fw-bold" for="input4">Description</label>
+                <textarea rows="" cols=""   id="input4"  class="form-control mb-3"></textarea>  
+            </div>
+            <div id="updateOrAdd">
+                <button class="btn btn-outline-primary"onclick="addProduct(0 , true)">Add Product</button>
+            </div>
+            <input type="search" id="searching" class="my-3 w-50 mx-auto form-control " placeholder="Search &#128269;" onkeyup = "searchKey(this.value)">
+        </div>            
+        <div class="container my-2">
+            <table class="table ">
+                <thead class="bg-dark text-white">
+                    <th>Product Name</th>
+                    <th>Product Price</th>
+                    <th>Product Category</th>
+                    <th>Product Description</th>
+                    <th class="text-warning">Update Product</th>
+                    <th class="text-danger">Delete Product </th>
+                </thead>
+                <tbody id="product">
+                </tbody>
+            </table>
+        </div>
+
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/mine.js"></script>
+    </body>
+</html>
